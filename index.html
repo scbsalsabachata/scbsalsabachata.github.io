@@ -10,6 +10,7 @@
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
    <title>SCB</title>
+   <link rel="icon" href="logoscb.png" type="image/png">
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -32,17 +33,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <style>
-   #logo-container {
-      width: 250px;
-      /* Ancho fijo para el contenedor del logo */
-   }
+  
 
    #logo {
-      max-width: 12%;
-      height: auto;
-      padding-left: 5%;
+      width: 20%;
+      height: 20%;
    }
-
    #navbar {
       position: fixed;
       top: 1%;
@@ -50,9 +46,7 @@
       width: 80%;
       background-color: rgba(51, 51, 51, 0.8);
       z-index: 1000;
-      /* Asegura que la barra de navegación esté encima de otros elementos */
       padding: 0px;
-      /* Aumentar el espacio dentro de la barra de navegación */
       height: 60px;
       border-radius: 0 0 20px 20px;
    }
@@ -69,11 +63,9 @@
       margin: 0;
    }
 
-
    .components {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
    }
 
    .components li {
@@ -90,87 +82,33 @@
    .components a:hover {
       color: rgb(0, 0, 0);
       background-color: #ffffff;
-      padding: 10px;
+      padding: 22px;
       /* Aumentar el espacio dentro de la barra de navegación */
       height: 10px;
       border-radius: 0 0 15px 15px;
    }
 
-   /* Estilos para pantallas pequeñas */
-   @media screen and (max-width: 768px) {
-      #navbar-toggle {
-         display: block;
-         position: absolute;
-         top: 10px;
-         left: 10px;
-         cursor: pointer;
-      }
-
-      .components {
-         display: none;
-         /* Ocultar la lista de enlaces en pantallas pequeñas */
-         flex-direction: column;
-         /* Apilar los enlaces verticalmente */
-         position: fixed;
-         top: 60px;
-         /* Ajustar la posición para evitar la superposición con la barra de navegación */
-         background-color: #333;
-         width: 100%;
-         padding-right: 0;
-      }
-
-      .components li {
-         margin-right: 20;
-         /* Eliminar el margen entre elementos */
-         padding: 100px 200px;
-         /* Añadir espacio alrededor de los enlaces */
-         border-bottom: 1px solid #666;
-         /* Añadir bordes entre los enlaces */
-      }
-
-      .components li:last-child {
-         border-bottom: none;
-         /* Eliminar el borde inferior del último enlace */
-      }
-
-      .components a {
-         color: white;
-      }
-
-      .components a:hover {
-         color: lightgray;
-      }
-
-      /* Mostrar la lista de enlaces cuando se hace clic en el botón de alternar */
-      #navbar.active .components {
-         display: flex;
-      }
 
 
-      .redes-sociales {
-         position: fixed;
-         top: 0;
-         left: 0;
-         background-color: #fff;
-         padding: 10px;
-         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-         z-index: 1000;
-      }
+   .navbar {
+      top: 1%;
+      left: 5%;
+      width: 90%;
+      background-color: rgba(51, 51, 51, 0.8);
+      border-radius: 0 0 20px 20px;
+}
+.logoportada{
+   top: 50%;
+}
+@media screen and (max-width: 767px) {
+   .banner_main img {
+    top: 100px;
+    margin-top: 20%;
+    width: 100%;
+    height: auto;
+}
+}
 
-      .red-social {
-         display: inline-block;
-         margin-right: 10px;
-         text-decoration: none;
-         color: #333;
-         font-weight: bold;
-      }
-
-      .contenido {
-         margin-top: 50px;
-         /* Ajusta el margen superior para evitar que el contenido quede detrás de las redes sociales */
-      }
-
-   }
 </style>
 <!-- body -->
 
@@ -178,37 +116,41 @@
    
    <!-- loader  -->
    <div class="loader_bg">
-      <div class="loader"><img src="logoscb.png" alt="#" /></div>
+      <div class="loader"><img src="loadingscb.gif" alt="#" /></div>
    </div>
-   <div class="wrapper">
+   <div class="">
       <!-- end loader -->
-      <div class="sidebar">
+      <div class="">
          <!-- Sidebar  -->
-         <nav id="navbar">
-
-            <div id="navbar-toggle">
-               <i class="fa fa-arrow-left"></i>
-
+         
+          <nav class="navbar navbar-expand-lg fixed-top ">
+            <a class="navbar-brand" href="#">
+               <img src="logoscb.png" alt="Logo" id="logo" height="10">
+               <!-- <img src="logoscb.png" alt="Salsa Club Bachata" height="40"> -->
+           </a>
+           
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               <i class="fa fa-bars" style="color: #ffffff;"></i>
+           </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+               
+                <ul class="navbar-nav ml-auto list-unstyled components" >
+                  <li class="active">
+                     <a href="#inicio">Inicio</a>
+                 </li>
+                 <li>
+                     <a href="#about">Nosotros</a>
+                 </li>
+                 <li>
+                     <a href="#game">SCB</a>
+                 </li>
+                 <li>
+                     <a href="#contact">Contáctanos</a>
+                 </li>
+                </ul>
             </div>
-
-            <ul class="list-unstyled components">
-               <li>
-                  <img src="logoscb.png" alt="Salsa Club Bachata" id="logo">
-               </li>
-               <li class="active">
-                  <a href="#inicio">Inicio</a>
-               </li>
-               <li>
-                  <a href="#about">Nosotros</a>
-               </li>
-               <li>
-                  <a href="#game">SCB</a>
-               </li>
-               <li>
-                  <a href="#contact">Contactanos</a>
-               </li>
-            </ul>
-         </nav>
+        </nav>
       </div>
       <div id="content" st>
          <!-- header -->
@@ -250,21 +192,167 @@
          <!-- end header -->
          <div id="">
             <section class="" style="background-color: black;">
-               <div class="banner_main">
-                  <img src="portadascbmain.png" alt="#" />
-                  <div class="container-fluid padding3">
-                     <div class="row">
-                        <div class="col-md-12">
-                           <div class="text-bg">
-                              <a href="Javascript:void(0)">Play now</a>
+                <div class="banner_main">
+                    <img class="logoportada" src="portadascbmain.png" alt="#" />
+                    <div class="container-fluid padding3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="text-bg">
+                                 <a href="#contact">Registrarse</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- licens -->
+        <div class="licens">
+         <div class="container">
+            <!-- <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Licensing & Reglation</h2>
+                     <span></span>
+                  </div>
+               </div>
+            </div> -->
+            <div class="row">
+               <!-- <div class="col-md-12">
+                  <div id="licens" class="carousel slide licens_Carousel " data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#licens" data-slide-to="0" class="active"></li>
+                        <li data-target="#licens" data-slide-to="1"></li>
+                        <li data-target="#licens" data-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="container">
+                              <div class="carousel-caption ">
+                                 <div class="row d_flex">
+                                    <div  class="col-md-6">
+                                       <div class="test_box">
+                                          <div class="jons">
+                                             <h4>Promotins</h4>
+                                          </div>
+                                          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                          <a class="read_more" href="Javascript:void(0)">Play Online</a>
+                                       </div>
+                                    </div>
+                                    <div  class="col-md-6">
+                                       <div class="test_box">
+                                          <div class="jons">
+                                             <figure><img src="jons_img1.png" alt="#"/></figure>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row d_flex">
+                                    <div  class="col-md-6">
+                                       <div class="test_box">
+                                          <div class="jons">
+                                             <h4>Promotins</h4>
+                                          </div>
+                                          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                          <a class="read_more" href="Javascript:void(0)">Play Online</a>
+                                       </div>
+                                    </div>
+                                    <div  class="col-md-6">
+                                       <div class="test_box">
+                                          <div class="jons">
+                                             <figure><img src="jons_img1.png" alt="#"/></figure>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row d_flex">
+                                    <div  class="col-md-6">
+                                       <div class="test_box">
+                                          <div class="jons">
+                                             <h4>Promotins</h4>
+                                          </div>
+                                          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                          <a class="read_more" href="Javascript:void(0)">Play Online</a>
+                                       </div>
+                                    </div>
+                                    <div  class="col-md-6">
+                                       <div class="test_box">
+                                          <div class="jons">
+                                             <figure><img src="jons_img1.png" alt="#"/></figure>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <a class="carousel-control-prev" href="#licens" role="button" data-slide="prev">
+                     <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                     </a>
+                     <a class="carousel-control-next" href="#licens" role="button" data-slide="next">
+                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                     </a>
+                  </div>
+                  <p class="lorem">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+               </div> -->
+               <div id="about" class="col-md-12">
+                  
+                  <div class="two_box">
+                     <div class="row d_flex">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="titlepage">
+                                 <h2>Quienes somos</h2>
+                                 <span></span>
+                              </div>
+                           </div>
+                        </div>
+                        
+                        <div id="customer"  class="customer">
+                           <div class="container">
+                              
+                              <div class="row">
+                                 
+                                 <div class="col-md-10 offset-md-1">
+                                    <div class="col-md-12">
+                                       <div class="many_box_img">
+                                          <figure><img src="portadascb.jpg" alt="#"/></figure>
+                                       </div>
+                                    </div>
+                                    <div class="customer_text">
+                                       <p>Somos una organización dedicada a promover el baile de ritmos latinos cómo; el género de la
+                                          salsa (cubana) y la bachata de manera inclusiva a las y los jóvenes, con el objetivo de crear un
+                                          espacio de familiaridad y confianza a las y los participantes.</p>
+                                       
+                                       <div class="customer_box">
+                                          <i><img src="logoscbmini.png" alt="#"/></i>
+                                          <h4>Salsa Club Bachata</h4>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
-               </div>
-            </section>
+               </div> 
+            </div>
          </div>
-
+      </div>
+      <!-- end lLicens -->
          <!-- Categories -->
          <!-- casino -->
          <div id="game" class="casino">
@@ -354,153 +442,7 @@
             </div>
          </div>
          <!-- end casino -->
-         <!-- licens -->
-         <!-- <div class="licens">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="titlepage">
-                        <h2>Licensing & Reglation</h2>
-                        <span></span>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-12">
-                     <div id="licens" class="carousel slide licens_Carousel " data-ride="carousel">
-                        <ol class="carousel-indicators">
-                           <li data-target="#licens" data-slide-to="0" class="active"></li>
-                           <li data-target="#licens" data-slide-to="1"></li>
-                           <li data-target="#licens" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                           <div class="carousel-item active">
-                              <div class="container">
-                                 <div class="carousel-caption ">
-                                    <div class="row d_flex">
-                                       <div  class="col-md-6">
-                                          <div class="test_box">
-                                             <div class="jons">
-                                                <h4>Promotins</h4>
-                                             </div>
-                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                             <a class="read_more" href="Javascript:void(0)">Play Online</a>
-                                          </div>
-                                       </div>
-                                       <div  class="col-md-6">
-                                          <div class="test_box">
-                                             <div class="jons">
-                                                <figure><img src="jons_img1.png" alt="#"/></figure>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="carousel-item">
-                              <div class="container">
-                                 <div class="carousel-caption">
-                                    <div class="row d_flex">
-                                       <div  class="col-md-6">
-                                          <div class="test_box">
-                                             <div class="jons">
-                                                <h4>Promotins</h4>
-                                             </div>
-                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                             <a class="read_more" href="Javascript:void(0)">Play Online</a>
-                                          </div>
-                                       </div>
-                                       <div  class="col-md-6">
-                                          <div class="test_box">
-                                             <div class="jons">
-                                                <figure><img src="jons_img1.png" alt="#"/></figure>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="carousel-item">
-                              <div class="container">
-                                 <div class="carousel-caption">
-                                    <div class="row d_flex">
-                                       <div  class="col-md-6">
-                                          <div class="test_box">
-                                             <div class="jons">
-                                                <h4>Promotins</h4>
-                                             </div>
-                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                             <a class="read_more" href="Javascript:void(0)">Play Online</a>
-                                          </div>
-                                       </div>
-                                       <div  class="col-md-6">
-                                          <div class="test_box">
-                                             <div class="jons">
-                                                <figure><img src="jons_img1.png" alt="#"/></figure>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#licens" role="button" data-slide="prev">
-                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-                        </a>
-                        <a class="carousel-control-next" href="#licens" role="button" data-slide="next">
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                        </a>
-                     </div>
-                     <p class="lorem">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                  </div>
-                  <div id="about" class="col-md-12">
-                     
-                     <div class="two_box">
-                        <div class="row d_flex">
-                           <div class="row">
-                              <div class="col-md-12">
-                                 <div class="titlepage">
-                                    <h2>Quienes somos</h2>
-                                    <span></span>
-                                 </div>
-                              </div>
-                           </div>
-                           
-                           <div id="customer"  class="customer">
-                              <div class="container">
-                                 
-                                 <div class="row">
-                                    
-                                    <div class="col-md-10 offset-md-1">
-                                       <div class="col-md-12">
-                                          <div class="many_box_img">
-                                             <figure><img src="portadascb.jpg" alt="#"/></figure>
-                                          </div>
-                                       </div>
-                                       <div class="customer_text">
-                                          <p>Somos una organización dedicada a promover el baile de ritmos latinos cómo; el género de la
-                                             salsa (cubana) y la bachata de manera inclusiva a las y los jóvenes, con el objetivo de crear un
-                                             espacio de familiaridad y confianza a las y los participantes.</p>
-                                          
-                                          <div class="customer_box">
-                                             <i><img src="logoscbmini.png" alt="#"/></i>
-                                             <h4>Salsa Club Bachata</h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div> -->
-         <!-- end lLicens -->
+         
          <!-- customer -->
 
          <!-- end customer -->
@@ -519,25 +461,23 @@
                   <div class="col-md-6 offset-md-3">
                      <form id="formulario-contacto" class="form_main">
                         <div class="row">
-                           <div class="col-md-12">
-                              <input class="form_control" placeholder="Nombre" required type="text" name="name">
-                           </div>
-                           <div class="col-md-12">
-                              <input class="form_control" placeholder="Número telefonico" required type="text"
-                                 name="numero">
-                           </div>
-                           <div class="col-md-12">
-                              <input class="form_control" placeholder="Email@gmail.com" required type="text"
-                                 name="correo">
-                           </div>
-                           <div class="col-md-12">
-                              <input class="form_control" placeholder="mensaje" type="text" required name="mensaje">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">Enviar</button>
-                           </div>
+                            <div class="col-md-12">
+                                <input class="form_control" placeholder="Nombre" required type="text" name="name">
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form_control" placeholder="Número telefónico" required type="text" pattern="[0-9]{9}" title="Debe ser un número de 9 dígitos" name="numero">
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form_control" placeholder="Email@gmail.com" required type="email" name="correo">
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form_control" placeholder="Mensaje" required type="text" name="mensaje">
+                            </div>
+                            <div class="col-md-12">
+                                <button class="send_btn">Enviar</button>
+                            </div>
                         </div>
-                     </form>
+                    </form>
                   </div>
                </div>
             </div>
@@ -573,12 +513,12 @@
                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                               <div class="address">
                                  <h3>Redes Sociales</h3>
-                                 <td class="m_-885217410708689671two-columns" style="background-color:#064775">
+                                 <td class="" >
                                     
-                                    <table class="m_-885217410708689671column">
+                                    <table class="">
                                        <tbody>
                                           <tr>
-                                             <td BGCOLOR="#064775">
+                                             <td BGCOLOR="">
                                                 <a href="https://www.facebook.com/SalsaCLUBachataPUNO" target="blank"
                                                    style="padding: 5px">
                                                    <img src="facebook.png"
@@ -608,7 +548,7 @@
                </div>
                <div class="copyright">
                   <div class="container">
-                     <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Salsa Club Bachata</a></p>
+                     <p>Copyright 2024 All Right Reserved By <a href="https://html.design/">Salsa Club Bachata</a></p>
                   </div>
                </div>
             </div>
@@ -624,6 +564,10 @@
          })();
       </script>
       <script>
+         document.getElementById("navbar-toggle").addEventListener("click", function() {
+    var menu = document.querySelector(".list-unstyled");
+    menu.classList.toggle("show");
+});
          var redesSociales = document.getElementById("redes-sociales");
 
          // Obtener la posición inicial de las redes sociales
