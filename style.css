@@ -163,8 +163,10 @@ a,
 }
 
 img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
+    margin-top: 0%;
+    top: 0px;
 }
 
 :focus {
@@ -357,37 +359,46 @@ button {
     width: 100%;
 }
 
-.logo a {
-    font-size: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #fff;
-    line-height: 40px;
-}
 
-.banner_main {
+
+/* .banner_main {
     position: relative;
     left: 15%;
     width: 160%;
-    /* height: 20%; */
-    top: 60px;
-}
+    /* height: 20%;
+    top: 60px;} */
 
+.banner_main {
+    position: relative;
+    text-align: center;
+}
 .text-bg {
     position: absolute;
-    left: 0;
-    right: 0;
-    text-align: center;
-    margin-top: -56px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
-
+.banner_main img {
+    top: 100px;
+    margin-top: 4%;
+    width: 100%;
+    height: auto;
+}
 .banner_main .text-bg a:hover {
     background-image: linear-gradient(to bottom, #bc883d, #f5e47b, #bc883d);
     color: #000;
     transition: all .4s ease-in;
     border-radius: 20px;
+}
+.text-bg a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .titlepage {
@@ -1023,3 +1034,8 @@ a.article:hover {
     color: #fff !important;
 }
 
+@media screen and (max-width: 768px) {
+    .text-bg {
+        top: 70%;
+    }
+}
