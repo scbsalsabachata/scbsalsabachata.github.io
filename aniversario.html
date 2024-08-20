@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mi Primera Página Web</title>
+   <style>
+      body {
+         background-image: url('4.png')
+      }
+      .tarjeta {
+            background-image: url('3.png');
+            background-size: 50%; /* Cambia el tamaño de la imagen al 50% del contenedor */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-position: center; /* Centra la imagen en el fondo */
+            background-attachment: fixed; /* Fija la imagen de fondo */
+            color: white; /* Cambia el color del texto a blanco para que sea visible */
+            font-family: Arial, sans-serif; /* Establece una fuente básica */
+            margin: 5; /* Elimina el margen por defecto del body */
+            padding: 20px;
+            text-align: center;
+            justify-content: left;
+            align-items: end; 
+      }
+      .logo {
+            background-image: url('logoantifaz.png');
+            height: 170px;
+            background-size: 10%; /* Cambia el tamaño de la imagen al 50% del contenedor */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-position: center; /* Centra la imagen en el fondo */
+            font-family: Arial, sans-serif;
+      }
+      h1 {
+            font-size: 2.5em; /* Tamaño del texto */
+            font-family: Arial, sans-serif; /* Fuente del texto */
+            background: linear-gradient(to right, #b8860b, #ffd700, #b8860b); /* Degradado dorado */
+            -webkit-background-clip: text; /* Clip de fondo para WebKit */
+            color: transparent; /* Hace que el color del texto sea transparente para mostrar el degradado */
+            text-align: center; /* Centra el texto */
+            margin: 20px; /* Margen alrededor del título */
+            position: relative; /* Para posicionar el fondo correctamente */
+        }
+
+        h1::before {
+         
+            content: "SCB"; /* Crea un elemento vacío antes del h1 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente negro */
+            z-index: -1; /* Coloca el fondo detrás del texto */
+            border-radius: 10px; /* Opcional: bordes redondeados para el fondo */
+        }
+   </style>
+</head>
+
+<body>
+   <br><br><br>
+   <div class="logo"></div>
+   <h1>Detalles Aniversario Salsa Club Bachata <br> (Fiesta de Antifaz)</h1>
+   
+   <div class="tarjeta">
+      <h4>actualizando información...</h4>
+   </div>
+
+</body>
+
+</html>
