@@ -10,31 +10,24 @@
     <title>Aniversario SCB</title>
 
     <style>
-        body {
+         body {
             background-image: url('4.png');
             background-size: cover;
-            /* Asegura que la imagen de fondo cubra toda la pantalla */
             background-position: center;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
 
         .tarjeta {
             background: #d1b985;
-            background-size: contain;
-            /* Ajusta la imagen de fondo al tamaño del contenedor */
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            font-family: Arial, sans-serif;
-            margin: 0 auto;
-            /* Centra el div horizontalmente */
             padding: 20px;
+            margin: 20px auto;
             text-align: left;
-            justify-content: center;
-            align-items: center;
-            width: 50%;
-            /* Ajusta el tamaño del div (puedes cambiar el valor según lo necesites) */
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
         .logo {
@@ -44,21 +37,16 @@
             background-repeat: no-repeat;
             background-position: center;
             margin: 20px auto;
-            /* Centrar el logo horizontalmente */
             max-width: 100%;
-            /* Asegura que el logo no se salga de la pantalla */
         }
 
         h1 {
             font-size: 2em;
-            /* Ajusta el tamaño del texto para móviles */
-            font-family: Arial, sans-serif;
             background: linear-gradient(to right, #b8860b, #ffd700, #b8860b);
             -webkit-background-clip: text;
             color: transparent;
             text-align: center;
-            margin: 20px;
-            position: relative;
+            margin: 20px 0;
         }
 
         h1::before {
@@ -73,36 +61,44 @@
             border-radius: 10px;
         }
 
+        img {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.5em;
-                /* Reducir el tamaño del texto para tabletas y móviles */
             }
 
             .tarjeta {
-                margin: 10px;
+                width: 90%;
                 padding: 15px;
             }
 
             .logo {
                 height: 100px;
-                /* Reducir el tamaño del logo para pantallas pequeñas */
             }
         }
 
         @media (max-width: 480px) {
             h1 {
                 font-size: 1.2em;
-                /* Ajuste adicional para pantallas más pequeñas */
             }
 
             .tarjeta {
+                width: 95%;
                 padding: 10px;
             }
 
             .logo {
                 height: 80px;
-                /* Reducir aún más el tamaño del logo */
             }
         }
     </style>
@@ -151,7 +147,8 @@
 
             <p><strong>¡Nos vemos en la pista de baile!</strong></p>
         </div>
-        <h1>PROGRAMA SABADO 31 AGOSTO</h1>
+        <div class="tarjeta">
+            <h1>PROGRAMA SABADO 31 AGOSTO</h1>
         <p style="line-height:normal;margin:0cm;"><span style="color:#7F6000;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>8:00 PM - Recepción de Invitados:</strong></span><span style="font-family:Calibri, sans-serif;font-size:11pt;"><span style="color:#7F6000;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"></span></span></p>
 <ul style="list-style-type:disc;">
     <li style="line-height:normal;margin-bottom:0cm;margin-right:0cm;margin-top:0cm;tab-stops:list 36.0pt;"><span style="color:windowtext;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">Venta de entradas para los asistentes (5 soles por persona).</span></li>
@@ -226,6 +223,7 @@
         <p style="line-height:107%;margin-bottom:0cm;margin-right:0cm;margin-top:0cm;"><span style="font-family:Calibri, sans-serif;font-size:11pt;"><span style="color:#7F6000;font-family:Symbol;"></span></span><span style="color:#7F6000;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:107%;">Comienza el baile general con una mezcla de todo tipo de música.</span></span><span style="font-family:Calibri, sans-serif;font-size:11pt;"><span style="color:#7F6000;"></span></span></p>
     </li>
 </ul>
+        </div>
 
 
     </div>
